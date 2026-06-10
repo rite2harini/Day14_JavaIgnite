@@ -34,3 +34,34 @@ Display all registered participants
 Display the total number of participants
 
 */
+import java.util.HashSet;
+public class Unique_visit_registration {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Generating hashset named participants
+		HashSet<String> participants = new HashSet<>();
+		//adding participants in it
+		participants.add("Arun");
+		participants.add("Priya");
+		participants.add("Ravi");
+		participants.add("Meena");
+		participants.add("Karthik");
+		participants.add("Priya");
+		participants.add("Ravi");
+		participants.add("Divya");
+		participants.add("Arun");
+		participants.add("Tanmay");
+		participants.add("Rahul");
+		participants.add("Sohail");
+		participants.add("Tanmay");
+		
+		//Displaying all the registered participants
+		System.out.println("Registered participants: "+ participants);
+		
+		//Displaying total no. of participants registered
+		System.out.println("Total no. of registered participants: "+participants.size());
+		
+		}
+
+}
