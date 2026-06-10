@@ -1,36 +1,31 @@
-/*
-Token Management System
+import java.util.LinkedList;
+import java.util.Queue;
 
-A hospital issues tokens to patients.
+public class Queue_Token_Management_System {
+    public static void main(String[] args) {
 
-Requirements:
-Add 5 patient names into a Queue.
-Display all patients waiting in the queue.
-Serve the first patient.
-Display the patient being served.
-Display the remaining queue.
-Concepts Tested:
-Queue
-offer()
-poll()
-peek()
+        Queue<String> patientQueue = new LinkedList<>();
 
-Instructions - 
-Create a Queue called patientQueue
+        // Add patients to the queue
+        patientQueue.offer("Arun");
+        patientQueue.offer("Priya");
+        patientQueue.offer("Ravi");
+        patientQueue.offer("Meena");
+        patientQueue.offer("Karthik");
 
-Add the following patients into the queue:
-    Arun
-    Priya
-    Ravi
-    Meena
-    Karthik
+        // Display all patients waiting
+        System.out.println("Patients Waiting: " + patientQueue);
 
-Display all patients waiting in the queue
+        // Display first patient using peek()
+        System.out.println("Next Patient: " + patientQueue.peek());
 
-Serve the first patient
-Store the served patient in servedPatient
+        // Serve the first patient
+        String servedPatient = patientQueue.poll();
 
-Display the served patient
+        // Display served patient
+        System.out.println("Served Patient: " + servedPatient);
 
-Display the remaining patients in the queue
-*/
+        // Display remaining queue
+        System.out.println("Remaining Patients: " + patientQueue);
+    }
+}
