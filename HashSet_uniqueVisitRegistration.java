@@ -1,36 +1,28 @@
-/*
-Unique Visitor Registration
+import java.util.HashSet;
 
-A college event registration system should not allow duplicate registrations.
+public class HashSet_uniqueVisitRegistration {
+    public static void main(String[] args) {
 
-Requirements:
-Store participant names using a HashSet.
-Add at least 8 names.
-Intentionally add a few duplicate names.
-Display all registered participants.
-Display the total number of unique participants.
-Hints
-HashSet
-add()
-size()
-Duplicate removal behavior
+        HashSet<String> participants = new HashSet<>();
 
-Instructions - 
-Create a HashSet called participants
+        // Adding participant names
+        participants.add("Arun");
+        participants.add("Priya");
+        participants.add("Ravi");
+        participants.add("Meena");
+        participants.add("Karthik");
+        participants.add("Priya");   // Duplicate
+        participants.add("Ravi");    // Duplicate
+        participants.add("Divya");
+        participants.add("Arun");    // Duplicate
 
-Add participant names:
-    Arun
-    Priya
-    Ravi
-    Meena
-    Karthik
-    Priya      (Duplicate)
-    Ravi       (Duplicate)
-    Divya
-    Arun       (Duplicate)
+        // Display all registered participants
+        System.out.println("Registered Participants:");
+        for (String name : participants) {
+            System.out.println(name);
+        }
 
-Display all registered participants
-
-Display the total number of participants
-
-*/
+        // Display total number of unique participants
+        System.out.println("\nTotal Unique Participants: " + participants.size());
+    }
+}
