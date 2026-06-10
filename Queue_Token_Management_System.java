@@ -34,3 +34,47 @@ Display the served patient
 
 Display the remaining patients in the queue
 */
+
+package JavaIgniteDay14;
+import java.util.*;
+
+public class Token_Management_System {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Generating queue named patientQueue
+		
+		Queue<String> patientQueue = new LinkedList<>();
+		//Adding patients in queue using offer()
+		
+		patientQueue.offer("Nandini");
+		patientQueue.offer("Ayush");
+		patientQueue.offer("Asmit");
+		patientQueue.offer("Sanjeeb");
+		patientQueue.offer("Supriya");
+		
+		System.out.println("Patients in the queue order: ");
+		int i=1;
+		for(String name:patientQueue)
+		{
+			System.out.println(i+"."+name);
+			i++;
+		}
+		
+		//Peeking the first patient and then adding it to servedPatient
+		System.out.println("Serving the first patient: "+patientQueue.peek());
+		String servedPatient = patientQueue.poll();
+		System.out.println("Served patients: "+servedPatient);
+		
+		//Remaining patients in the patientQueue
+		System.out.println("Remaining patients in queue:");
+		i=1;
+		for(String name:patientQueue)
+		{
+			System.out.println(i+"."+name);
+			i++;
+		}
+		
+	}
+
+}

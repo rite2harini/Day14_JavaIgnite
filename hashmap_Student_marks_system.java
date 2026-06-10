@@ -40,3 +40,51 @@ IF the Student ID exists in the HashMap THEN
 ELSE  Display "Student Not Found"
 END IF
   */
+
+package JavaIgniteDay14;
+import java.util.HashMap;
+import java.util.Scanner;
+
+
+public class Student_Marks {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 // Create HashMap
+        HashMap<Integer, String> students = new HashMap<>();
+
+        // Add student records
+        students.put(101, "Nandini");
+        students.put(102, "Ayush");
+        students.put(103, "Asmit");
+        students.put(104, "Sanjeeb");
+        students.put(105, "Arya");
+
+        // Display all student records
+        System.out.println("Student Records:");
+        for (Integer id : students.keySet()) {
+            System.out.println("ID: " + id + "  Name: " + students.get(id));
+        }
+
+        // Take input from user
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("\nEnter Student ID: ");
+        int studentId = sc.nextInt();
+
+        // Check if ID exists
+        if (students.containsKey(studentId)) {
+
+            String studentName = students.get(studentId);
+
+            System.out.println("Student Name: " + studentName);
+
+        } else {
+
+            System.out.println("Student Not Found");
+
+        }
+
+        sc.close();
+    }
+}

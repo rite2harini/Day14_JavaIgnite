@@ -34,3 +34,41 @@ Display all registered participants
 Display the total number of participants
 
 */
+
+package JavaIgniteDay14;
+import java.util.HashSet;
+
+public class Unique_Visitor_Registration {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Generating hashset named participants
+		
+		HashSet<String> participants = new HashSet<>();
+		//adding participants in it
+		
+		participants.add("Nandini");
+		participants.add("Asmit");
+		participants.add("Ayush");
+		participants.add("Sanjeeb");
+		participants.add("Supriya");
+		participants.add("Simuna");
+		participants.add("Satya");
+		participants.add("Surya");
+		participants.add("Abhijit");
+		participants.add("Arya");
+		participants.add("Sumeet");
+		participants.add("Samarjit");
+		participants.add("Ratikant");
+		
+		//Displaying all the registered participants
+		System.out.println("Registered participants: "+ participants);
+		
+		//Displaying total no. of participants registered
+		System.out.println("Total no. of registered participants: "+participants.size());
+		
+		}
+
+}
+
+
