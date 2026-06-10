@@ -1,36 +1,29 @@
-/*
-Unique Visitor Registration
+public class TokenManagementSystem {
+	    public static void main(String[] args) {
 
-A college event registration system should not allow duplicate registrations.
+	        // Create Queue
+	        Queue<String> patientQueue = new LinkedList<>();
 
-Requirements:
-Store participant names using a HashSet.
-Add at least 8 names.
-Intentionally add a few duplicate names.
-Display all registered participants.
-Display the total number of unique participants.
-Hints
-HashSet
-add()
-size()
-Duplicate removal behavior
+	        // Add patients into the queue
+	        patientQueue.offer("Arun");
+	        patientQueue.offer("Priya");
+	        patientQueue.offer("Ravi");
+	        patientQueue.offer("Meena");
+	        patientQueue.offer("Karthik");
 
-Instructions - 
-Create a HashSet called participants
+	        // Display all patients waiting in the queue
+	        System.out.println("Patients waiting in the queue:");
+	        System.out.println(patientQueue);
 
-Add participant names:
-    Arun
-    Priya
-    Ravi
-    Meena
-    Karthik
-    Priya      (Duplicate)
-    Ravi       (Duplicate)
-    Divya
-    Arun       (Duplicate)
+	        // Serve the first patient
+	        String servedPatient = patientQueue.poll();
 
-Display all registered participants
+	        // Display the served patient
+	        System.out.println("\nPatient being served: " + servedPatient);
 
-Display the total number of participants
+	        // Display the remaining patients in the queue
+	        System.out.println("\nRemaining patients in the queue:");
+	        System.out.println(patientQueue);
+	    }
+	}
 
-*/
