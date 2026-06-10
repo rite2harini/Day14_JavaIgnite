@@ -1,29 +1,29 @@
-public class TokenManagementSystem {
+public class UniqueVisitorRegistration {
 	    public static void main(String[] args) {
 
-	        // Create Queue
-	        Queue<String> patientQueue = new LinkedList<>();
+	        // Create HashSet
+	        HashSet<String> participants = new HashSet<>();
 
-	        // Add patients into the queue
-	        patientQueue.offer("Arun");
-	        patientQueue.offer("Priya");
-	        patientQueue.offer("Ravi");
-	        patientQueue.offer("Meena");
-	        patientQueue.offer("Karthik");
+	        // Add participant names
+	        participants.add("Arun");
+	        participants.add("Priya");
+	        participants.add("Ravi");
+	        participants.add("Meena");
+	        participants.add("Karthik");
+	        participants.add("Priya");   // Duplicate
+	        participants.add("Ravi");    // Duplicate
+	        participants.add("Divya");
+	        participants.add("Arun");    // Duplicate
 
-	        // Display all patients waiting in the queue
-	        System.out.println("Patients waiting in the queue:");
-	        System.out.println(patientQueue);
+	        // Display all registered participants
+	        System.out.println("Registered Participants:");
+	        for (String participant : participants) {
+	            System.out.println(participant);
+	        }
 
-	        // Serve the first patient
-	        String servedPatient = patientQueue.poll();
-
-	        // Display the served patient
-	        System.out.println("\nPatient being served: " + servedPatient);
-
-	        // Display the remaining patients in the queue
-	        System.out.println("\nRemaining patients in the queue:");
-	        System.out.println(patientQueue);
+	        // Display total number of unique participants
+	        System.out.println("\nTotal Unique Participants: " + participants.size());
 	    }
 	}
 
+	
