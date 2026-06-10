@@ -34,3 +34,29 @@ Display the served patient
 
 Display the remaining patients in the queue
 */
+package day14_progs;
+import java.util.*;
+
+public class Queue_Token_Management_System {
+
+    public static void main(String[] args) {
+
+        Queue<String> patientQueue = new LinkedList<>();
+
+        patientQueue.offer("Arun");
+        patientQueue.offer("Priya");
+        patientQueue.offer("Ravi");
+        patientQueue.offer("Meena");
+        patientQueue.offer("Karthik");
+
+        System.out.println("Patients waiting in queue:");
+        System.out.println(patientQueue);
+
+        String servedPatient = patientQueue.poll();
+
+        System.out.println("Patient being served: " + servedPatient);
+
+        System.out.println("Remaining queue:");
+        System.out.println(patientQueue);
+    }
+}

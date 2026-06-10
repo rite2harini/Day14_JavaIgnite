@@ -44,3 +44,66 @@ Store it in currentPage
 Display currentPage
 
 */
+/*
+ * START
+
+Create a Stack called browserHistory
+
+Push "google.com" into browserHistory
+Push "youtube.com" into browserHistory
+Push "github.com" into browserHistory
+Push "wikipedia.org" into browserHistory
+Push "stackoverflow.com" into browserHistory
+
+Display "Visited Websites:"
+Display browserHistory
+
+Display "Pressing Back Button..."
+
+Remove top website using pop()
+Store it in removedPage1
+
+Remove next top website using pop()
+Store it in removedPage2
+
+Display "Removed Page 1: " + removedPage1
+Display "Removed Page 2: " + removedPage2
+
+Get current page using peek()
+Store it in currentPage
+
+Display "Current Page: " + currentPage
+
+STOP
+ */
+package day14_progs;
+import java.util.*;
+public class Stack_Browser_Back_Button_Simulation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Stack <String> browserHistory =new Stack<>();
+	
+		browserHistory.push("google.com");
+		browserHistory.push("youtube.com");
+		browserHistory.push("github.com");
+		browserHistory.push("wikipedia.org");
+		browserHistory.push("stackoverflow.com");
+		
+		System.out.print("Visired Websites are ↓\n");
+		System.out.println(browserHistory);
+		
+		System.out.println("Pressing Back Button...");
+		String  removedPage1 =browserHistory.pop();
+		System.out.println(removedPage1 + " removed");
+		
+		System.out.println("Pressing Back Button...");
+		String  removedPage2 =browserHistory.pop();
+		System.out.println(removedPage2 + " removed");
+		
+		String currentPage = browserHistory.peek();
+		System.out.println("Current page is → "+currentPage);
+		
+	}
+
+}
