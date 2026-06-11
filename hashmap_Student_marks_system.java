@@ -1,4 +1,115 @@
-/*
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class StudentMarksLookupSystem {
+    public static void main(String[] args) {
+
+        // Create HashMap
+        HashMap<Integer, String> students = new HashMap<>();
+
+        // Add student records
+        students.put(101, "John");
+        students.put(102, "Priya");
+        students.put(103, "Rahul");
+        students.put(104, "David");
+        students.put(105, "Anu");
+
+        // Display all student records
+        System.out.println("Student Records:");
+        for (Integer id : students.keySet()) {
+            System.out.println(id + " -> " + students.get(id));
+        }
+
+        // Ask user to enter Student ID
+        Scanner sc = new Scanner(System.in);
+        System.out.print("\nEnter Student ID: ");
+        int studentId = sc.nextInt();
+
+        // Check if Student ID exists
+        if (students.containsKey(studentId)) {
+            String studentName = students.get(studentId);
+            System.out.println("Student Name: " + studentName);
+        } else {
+            System.out.println("Student Not Found");
+        }
+
+        sc.close();
+    }
+}/*import java.util.HashMap;
+import java.util.Scanner;
+
+public class StudentMarksLookupSystem {
+    public static void main(String[] args) {
+
+        // Create HashMap
+        HashMap<Integer, String> students = new HashMap<>();
+
+        // Add student records
+        students.put(101, "John");
+        students.put(102, "Priya");
+        students.put(103, "Rahul");
+        students.put(104, "David");
+        students.put(105, "Anu");
+
+        // Display all student records
+        System.out.println("Student Records:");
+        for (Integer id : students.keySet()) {
+            System.out.println(id + " -> " + students.get(id));
+        }
+
+        // Ask user to enter Student ID
+        Scanner sc = new Scanner(System.in);
+        System.out.print("\nEnter Student ID: ");
+        int studentId = sc.nextInt();
+
+        // Check if Student ID exists
+        if (students.containsKey(studentId)) {
+            String studentName = students.get(studentId);
+            System.out.println("Student Name: " + studentName);
+        } else {
+            System.out.println("Student Not Found");
+        }
+
+        sc.close();
+    }
+}import java.util.HashMap;
+import java.util.Scanner;
+
+public class StudentMarksLookupSystem {
+    public static void main(String[] args) {
+
+        // Create HashMap
+        HashMap<Integer, String> students = new HashMap<>();
+
+        // Add student records
+        students.put(101, "John");
+        students.put(102, "Priya");
+        students.put(103, "Rahul");
+        students.put(104, "David");
+        students.put(105, "Anu");
+
+        // Display all student records
+        System.out.println("Student Records:");
+        for (Integer id : students.keySet()) {
+            System.out.println(id + " -> " + students.get(id));
+        }
+
+        // Ask user to enter Student ID
+        Scanner sc = new Scanner(System.in);
+        System.out.print("\nEnter Student ID: ");
+        int studentId = sc.nextInt();
+
+        // Check if Student ID exists
+        if (students.containsKey(studentId)) {
+            String studentName = students.get(studentId);
+            System.out.println("Student Name: " + studentName);
+        } else {
+            System.out.println("Student Not Found");
+        }
+
+        sc.close();
+    }
+}
 Student Marks Lookup System
 
 Create a program that stores the following details using a HashMap:
