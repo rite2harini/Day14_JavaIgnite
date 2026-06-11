@@ -40,3 +40,37 @@ IF the Student ID exists in the HashMap THEN
 ELSE  Display "Student Not Found"
 END IF
   */
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class StudentLookup {
+    public static void main(String[] args) {
+        HashMap<Integer, String> students = new HashMap<>();
+        Scanner scanner = new Scanner(System.in);
+        
+        // Adding student records
+        students.put(101, "John");
+        students.put(102, "Priya");
+        students.put(103, "Rahul");
+        students.put(104, "David");
+        students.put(105, "Anu");
+        
+        // Display all records
+        System.out.println("Student Records:");
+        for (Integer id : students.keySet()) {
+            System.out.println("ID: " + id + " → Name: " + students.get(id));
+        }
+        
+        // Search by ID
+        System.out.print("\nEnter Student ID to search: ");
+        int searchID = scanner.nextInt();
+        
+        if (students.containsKey(searchID)) {
+            System.out.println("Student Found: " + students.get(searchID));
+        } else {
+            System.out.println("Student Not Found");
+        }
+        
+        scanner.close();
+    }
+}

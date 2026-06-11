@@ -44,3 +44,33 @@ Store it in currentPage
 Display currentPage
 
 */
+BEGIN
+
+    // Step 1: Create Stack and push websites
+    CREATE Stack browserHistory
+    
+    PUSH "google.com" TO browserHistory
+    PUSH "youtube.com" TO browserHistory
+    PUSH "github.com" TO browserHistory
+    PUSH "wikipedia.org" TO browserHistory
+    PUSH "stackoverflow.com" TO browserHistory
+    
+    // Step 2: Display all visited websites
+    PRINT "Visited websites: " + browserHistory
+    
+    // Step 3: Simulate Back button twice
+    PRINT "Pressing Back Button..."
+    
+    // First back press
+    removedPage1 = POP from browserHistory
+    PRINT "Removed: " + removedPage1
+    
+    // Second back press
+    removedPage2 = POP from browserHistory
+    PRINT "Removed: " + removedPage2
+    
+    // Step 4: Display current page
+    currentPage = PEEK browserHistory
+    PRINT "Current page: " + currentPage
+
+END

@@ -34,3 +34,27 @@ Display the served patient
 
 Display the remaining patients in the queue
 */
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class TokenManagement {
+    public static void main(String[] args) {
+        Queue<String> patientQueue = new LinkedList<>();
+        
+        // Adding patients
+        String[] patients = {"Arun", "Priya", "Ravi", "Meena", "Karthik"};
+        for (String patient : patients) {
+            patientQueue.offer(patient);
+        }
+        
+        // Display waiting queue
+        System.out.println("Patients waiting: " + patientQueue);
+        
+        // Serve first patient
+        String servedPatient = patientQueue.poll();
+        
+        // Display results
+        System.out.println("Serving: " + servedPatient);
+        System.out.println("Remaining patients: " + patientQueue);
+    }
+}
