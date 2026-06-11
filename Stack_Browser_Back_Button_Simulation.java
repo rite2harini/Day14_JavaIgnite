@@ -1,46 +1,28 @@
-want the pseudo code for 
-/*
-A browser stores visited pages in a Stack.
+import java.util.Stack;
+	public class BrowserHistory {
+	    public static void main(String[] args) {
 
-Requirements:
-Push 5 website names into a Stack.
-Display all visited websites.
-Simulate pressing the Back button twice.
-Display the pages that were removed.
-Display the current page after going back.
-Concepts Tested:
-Stack
-push()
-pop()
-peek()
+	        Stack<String> browserHistory = new Stack<>();
 
-Instructions-
-Create a Stack called browserHistory
+	        browserHistory.push("google.com");
+	        browserHistory.push("youtube.com");
+	        browserHistory.push("github.com");
+	        browserHistory.push("wikipedia.org");
+	        browserHistory.push("stackoverflow.com");
 
-Push the following websites into the Stack:
-    google.com
-    youtube.com
-    github.com
-    wikipedia.org
-    stackoverflow.com
+	        System.out.println("Visited Websites:");
+	        System.out.println(browserHistory);
 
-Display all visited websites
+	        System.out.println("\nPressing Back Button...");
 
-Print "Pressing Back Button..."
+	        String removedPage1 = browserHistory.pop();
+	        String removedPage2 = browserHistory.pop();
 
-Remove the top website from the Stack
-Store it in removedPage1
+	        System.out.println("Removed Page 1: " + removedPage1);
+	        System.out.println("Removed Page 2: " + removedPage2);
 
-Remove the next top website from the Stack
-Store it in removedPage2
+	        String currentPage = browserHistory.peek();
 
-Display removedPage1
-
-Display removedPage2
-
-Get the current page using peek()
-Store it in currentPage
-
-Display currentPage
-
-*/
+	        System.out.println("Current Page: " + currentPage);
+	    }
+}
