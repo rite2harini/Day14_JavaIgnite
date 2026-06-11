@@ -44,3 +44,39 @@ Store it in currentPage
 Display currentPage
 
 */
+import java.util.Stack;
+
+public class BrowserHistory {
+    public static void main(String[] args) {
+
+        // Create Stack
+        Stack<String> browserHistory = new Stack<>();
+
+        // Push websites into the Stack
+        browserHistory.push("google.com");
+        browserHistory.push("youtube.com");
+        browserHistory.push("github.com");
+        browserHistory.push("wikipedia.org");
+        browserHistory.push("stackoverflow.com");
+
+        // Display all visited websites
+        System.out.println("Visited Websites:");
+        System.out.println(browserHistory);
+
+        // Simulate Back button
+        System.out.println("\nPressing Back Button...");
+
+        String removedPage1 = browserHistory.pop();
+        String removedPage2 = browserHistory.pop();
+
+        // Display removed pages
+        System.out.println("Removed Page 1: " + removedPage1);
+        System.out.println("Removed Page 2: " + removedPage2);
+
+        // Get current page
+        String currentPage = browserHistory.peek();
+
+        // Display current page
+        System.out.println("Current Page: " + currentPage);
+    }
+}
