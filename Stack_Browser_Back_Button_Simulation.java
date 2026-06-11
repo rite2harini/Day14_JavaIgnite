@@ -36,6 +36,7 @@ Store it in removedPage2
 
 Display removedPage1
 
+
 Display removedPage2
 
 Get the current page using peek()
@@ -43,4 +44,30 @@ Store it in currentPage
 
 Display currentPage
 
-*/
+*/START
+
+Create Stack browserHistory
+
+Push "google.com" into browserHistory
+Push "youtube.com" into browserHistory
+Push "github.com" into browserHistory
+Push "wikipedia.org" into browserHistory
+Push "stackoverflow.com" into browserHistory
+
+Display "Visited Websites:"
+Display browserHistory
+
+Display "Pressing Back Button..."
+
+removedPage1 = Pop top element from browserHistory
+
+removedPage2 = Pop top element from browserHistory
+
+Display "Removed Page 1: " + removedPage1
+Display "Removed Page 2: " + removedPage2
+
+currentPage = Peek top element from browserHistory
+
+Display "Current Page: " + currentPage
+
+END
