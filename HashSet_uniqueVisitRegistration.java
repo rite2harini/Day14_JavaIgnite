@@ -37,7 +37,7 @@ Display the total number of participants
 
 import java.util.HashSet;
 
-public class hashmap_Student_marks_system {
+public class HashSet_uniqueVisitRegistration {
     public static void main(String[] args) {
         HashSet<String> participants = new HashSet<>();
 

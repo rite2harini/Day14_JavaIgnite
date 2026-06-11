@@ -48,7 +48,7 @@ Display currentPage
 
 import java.util.Stack;
 
-public class BrowserHistory {
+public class BrowserBackButton {
     public static void main(String[] args) {
         Stack<String> browserHistory = new Stack<>();
 
