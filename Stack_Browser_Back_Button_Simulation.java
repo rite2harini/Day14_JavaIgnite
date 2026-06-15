@@ -44,3 +44,20 @@ Store it in currentPage
 Display currentPage
 
 */
+    1.create a Stack called browserHistory
+    
+2.then ask how many websites is needed to be pushed(Here qn says 5)
+                                                    
+3.then make a loop and run for the number of websites needed to be inputed....take the input and push it into the stack
+    by using push() function
+    
+4.then display it by using sop(browserHistory)
+    
+5.print "Pressing Back Button..."
+    
+6.then by using pop() function remove the top website and store it in removed page1
+    
+7.repeat steps 5 & 6 to remove the 2nd website
+and then print removedPage1 and removedPage2
+    
+8.print the current page using peek() and store it in currentpage and print it
