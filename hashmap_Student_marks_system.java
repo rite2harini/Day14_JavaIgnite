@@ -1,42 +1,39 @@
-/*
-Student Marks Lookup System
+package JAVA_DAY_14;
+import java.util.HashMap;
+import java.util.Scanner;
 
-Create a program that stores the following details using a HashMap:
+public class STUDENT_MARK_SYSTEM {
+	
+    public static void main(String[] args) {
+    	// TODO Auto-generated method stub
+        HashMap<Integer, String> students = new HashMap<>();
+       
+        students.put(1009, "STWATRA");
+        students.put(1012, "SUBHENDU");
+        students.put(1023, "BALDEV");
+        students.put(1044, "HRUSHIKESH");
+        students.put(1056, "GURUDUTTA");
+       
+        System.out.println("Student Records:");
+        for (Integer id : students.keySet()) {
+            System.out.println("ID: " + id + "  Name: " + students.get(id));
+        }     
+        Scanner sc = new Scanner(System.in);
 
-Student ID → Student Name
-Requirements:
-Add at least 5 students.
-Display all student records.
-Ask the user to enter a Student ID.
-Display the corresponding Student Name.
+        System.out.print("\nEnter Student ID: ");
+        int studentId = sc.nextInt();       
+        if (students.containsKey(studentId)) {
 
-If the ID does not exist, print:
+            String studentName = students.get(studentId);
 
-Student Not Found
-Hint - use HashMap
-put()
-get()
-containsKey()
+            System.out.println("Student Name: " + studentName);
 
-Instructions - 
-Create a HashMap called students
+        } else {
 
-Add student records:
-    101 → John
-    102 → Priya
-    103 → Rahul
-    104 → David
-    105 → Anu
+            System.out.println("Student Not Found");
 
-Display all student records
+        }
 
-Ask the user to enter a Student ID
-
-Read the Student ID
-
-IF the Student ID exists in the HashMap THEN
-       Get the student name using the ID
-       Display the student name
-ELSE  Display "Student Not Found"
-END IF
-  */
+        sc.close();
+    }
+}

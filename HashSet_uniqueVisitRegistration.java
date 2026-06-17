@@ -1,36 +1,30 @@
-/*
-Unique Visitor Registration
+package JAVA_DAY_14;
+import java.util.*;
+public class STACK_BROWSER_BACK_BUTTON {
 
-A college event registration system should not allow duplicate registrations.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Stack<String> browserHistory = new Stack<>();
+		browserHistory.push("google.com");
+		browserHistory.push("youtube.com");
+		browserHistory.push("github.com");
+		browserHistory.push("hackerrank.com");
+		browserHistory.push("leetcode.com");
+		System.out.println("Visited websites:");
+		for(String websites:browserHistory)
+		{
+			System.out.println(websites);
+		}
+		
+		System.out.println("\nPressing Back Button...\n");
+		
+		String removedPage1 = browserHistory.pop();
+		String removedPage2 = browserHistory.pop();
+		
+		System.out.println("Removed pages:\n"+removedPage1+"\n"+removedPage2);
+		String currentPage = browserHistory.peek();
+		System.out.println("\nCurrent page:\n"+currentPage);
+		
+	}
 
-Requirements:
-Store participant names using a HashSet.
-Add at least 8 names.
-Intentionally add a few duplicate names.
-Display all registered participants.
-Display the total number of unique participants.
-Hints
-HashSet
-add()
-size()
-Duplicate removal behavior
-
-Instructions - 
-Create a HashSet called participants
-
-Add participant names:
-    Arun
-    Priya
-    Ravi
-    Meena
-    Karthik
-    Priya      (Duplicate)
-    Ravi       (Duplicate)
-    Divya
-    Arun       (Duplicate)
-
-Display all registered participants
-
-Display the total number of participants
-
-*/
+}
