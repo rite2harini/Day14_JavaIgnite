@@ -44,3 +44,24 @@ Store it in currentPage
 Display currentPage
 
 */
+INITIALIZE Stack as browserHistory
+
+PUSH "google.com" onto browserHistory
+PUSH "youtube.com" onto browserHistory
+PUSH "github.com" onto browserHistory
+PUSH "wikipedia.org" onto browserHistory
+PUSH "stackoverflow.com" onto browserHistory
+
+PRINT "Visited websites: " + browserHistory
+
+PRINT "Pressing Back Button..."
+
+SET removedPage1 = POP from browserHistory
+SET removedPage2 = POP from browserHistory
+
+PRINT "Removed Page 1: " + removedPage1
+PRINT "Removed Page 2: " + removedPage2
+
+SET currentPage = PEEK from browserHistory
+
+PRINT "Current Page: " + currentPage
